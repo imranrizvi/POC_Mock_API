@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Boilerplate" Version="1.0.1" />
+    <PackageReference Include="Moq" Version="4.14.5" />
+    <PackageReference Include="Moq.AutoMock" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RepositoryFramework\RepositoryFramework.csproj" />
+  </ItemGroup>
+
+</Project>

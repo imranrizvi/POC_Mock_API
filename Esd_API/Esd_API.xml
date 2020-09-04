@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Esd_API</name>
+    </assembly>
+    <members>
+        <member name="M:Esd_API.Controllers.EsdController.Get(Model.EsdInput)">
+             <summary>
+             Get Estimated Shipping Date
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 POST /get
+                 {
+                    "OrderDate": "01/01/2020",
+                    "SkuNumber": "210-ADRL"
+                 }
+            
+             </remarks>
+             <param name="esdInput"></param>
+        </member>
+    </members>
+</doc>
