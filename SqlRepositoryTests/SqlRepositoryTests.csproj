@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Esd_API\Esd_API.csproj" />
     <ProjectReference Include="..\Repository1\SqlRepository.csproj" />
   </ItemGroup>
 

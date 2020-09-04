@@ -9,8 +9,7 @@ namespace Esd_API.Controllers
     [Produces("application/json")]
     [ApiController]
     [Route("api/[controller]")]
-    //[Microsoft.AspNetCore.Cors.EnableCors("CORSPolicy")]
-    public class EsdController : ApiControllerAbstract<EsdInput, IRepository<string, int>>
+    public class EsdController : ApiControllerAbstract<EsdRequest, IRepository<string, int>>
     {
         IRepository<string, int> _skuRepository;
         EsdBusiness _business;
@@ -31,7 +30,7 @@ namespace Esd_API.Controllers
         ///
         ///     POST /get
         ///     {
-        ///        "OrderDate": "01/01/2020",
+        ///        "OrderDate": "1/2/2020  12:00:00 AM",
         ///        "SkuNumber": "210-ADRL"
         ///     }
         ///
@@ -40,8 +39,8 @@ namespace Esd_API.Controllers
         //[SwaggerRequestExample(typeof(EsdInput), typeof(EsdInput))]
         [HttpPost]
         [Route("Get")]
-        [ProducesResponseType(typeof(EsdOutput), 201)]
-        public override IActionResult Get(EsdInput esdInput)
+        [ProducesResponseType(typeof(EsdResponse), 201)]
+        public override IActionResult Get(EsdRequest esdInput)
         {
             return Ok(_business.Calculate(esdInput, _skuRepository));
         }

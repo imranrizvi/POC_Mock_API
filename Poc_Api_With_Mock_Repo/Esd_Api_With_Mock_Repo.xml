@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Esd_Api_With_Mock_Repo</name>
+    </assembly>
+    <members>
+        <member name="M:Esd_API.Controllers.EsdControllerTest.GetTest(Model.EsdRequestWithMock)">
+             <summary>
+             Get Estimated Shipping Date
+             </summary>
+             <remarks>
+             Sample request:
+            
+            POST /get
+            {
+               "OrderDate": "1/2/2020  12:00:00 AM",
+               "SkuNumber": "210-ADRL",
+               "AutomationTesting": {
+                 "EnableMockTesting": true,
+                 "MockData": {
+                   "SkuInfos": [
+                     {
+                     "SkuNumber":"210-ADRL",
+                     "LeadTime": 2
+                     }
+                   ]
+                 },
+                 "ExpectedOutput": {
+                   "FieldAndExpectedValue": [
+                     {
+                       "Field": "$.ESD",
+                       "ExpectedValue": "1/3/2020  12:00:00 AM"
+                     }
+                   ],
+                   "Result": true
+                 }
+               }
+             }
+            
+             </remarks>
+             <param name="request"></param>
+        </member>
+    </members>
+</doc>

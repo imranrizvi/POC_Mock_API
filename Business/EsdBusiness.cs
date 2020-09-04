@@ -6,10 +6,11 @@ namespace Business
 {
     public class EsdBusiness 
     {
-        public EsdOutput Calculate(EsdInput input, IRepository<string,int> skuRepository)
+        public EsdResponse Calculate(EsdRequest request, IRepository<string,int> skuRepository)
         {
-            var leadTime = skuRepository.Get(input.SkuNumber);
-            return new EsdOutput() { ESD = input.OrderDate.AddDays(leadTime) };
+            var leadTime = skuRepository.Get(request.SkuNumber);
+            
+            return new EsdResponse() { ESD = DateTime.Parse(request.OrderDate).AddDays(leadTime).ToString() };
         }
     }
 }

@@ -4,7 +4,7 @@
         <name>Esd_API</name>
     </assembly>
     <members>
-        <member name="M:Esd_API.Controllers.EsdController.Get(Model.EsdInput)">
+        <member name="M:Esd_API.Controllers.EsdController.Get(Model.EsdRequest)">
              <summary>
              Get Estimated Shipping Date
              </summary>
@@ -13,7 +13,7 @@
             
                  POST /get
                  {
-                    "OrderDate": "01/01/2020",
+                    "OrderDate": "1/2/2020  12:00:00 AM",
                     "SkuNumber": "210-ADRL"
                  }
             

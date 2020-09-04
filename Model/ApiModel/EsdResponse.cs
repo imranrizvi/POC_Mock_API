@@ -3,8 +3,8 @@
 namespace Model
 {
     [Serializable]
-    public class EsdOutput
+    public class EsdResponse
     {
-        public DateTimeOffset ESD;
+        public string ESD { get; set; }
     }
 }
