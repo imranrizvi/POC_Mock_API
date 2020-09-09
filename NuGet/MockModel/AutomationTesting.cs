@@ -6,6 +6,6 @@ namespace Model
     {
         public bool EnableMockTesting { get; set; }
         //public abstract MockDataAbstract MockData { get; set; }
-        //public abstract ExpectedOutputAbstract ExpectedOutput { get; set; }
+        //public abstract ExpectationsAbstract Expectations { get; set; }
     }
 }

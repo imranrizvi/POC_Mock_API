@@ -6,6 +6,10 @@ namespace Business
 {
     public class EsdBusiness 
     {
+        public EsdBusiness()
+        {
+
+        }
         public EsdResponse Calculate(EsdRequest request, IRepository<string,int> skuRepository)
         {
             var leadTime = skuRepository.Get(request.SkuNumber);

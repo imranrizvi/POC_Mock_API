@@ -2,7 +2,7 @@
 
 namespace Model
 {
-    public class ExpectedOutputAbstract
+    public class ExpectationsAbstract
     {
         public IEnumerable<FieldAndExpectedValue> FieldAndExpectedValue { get; set; }
     }

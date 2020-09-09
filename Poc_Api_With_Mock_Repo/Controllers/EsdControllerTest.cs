@@ -48,7 +48,7 @@ namespace Esd_API.Controllers
         ///         }
         ///       ]
         ///     },
-        ///     "ExpectedOutput": {
+        ///     "Expectations": {
         ///       "FieldAndExpectedValue": [
         ///         {
         ///           "Field": "$.ESD",
@@ -78,7 +78,7 @@ namespace Esd_API.Controllers
         private bool GetIfExpectationMet(EsdRequestWithMock request, EsdResponseWithMock response)
         {
             bool result = true;
-            foreach (var a in request.AutomationTesting.ExpectedOutput.FieldAndExpectedValue)
+            foreach (var a in request.AutomationTesting.Expectations.FieldAndExpectedValue)
             {
                 var responseObject = JObject.FromObject(response);
                 var output = responseObject.SelectToken(a.Field).ToString();

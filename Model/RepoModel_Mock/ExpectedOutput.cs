@@ -2,7 +2,7 @@
 
 //namespace Model
 //{
-//    public class ExpectedOutput : ExpectedOutputAbstract
+//    public class Expectations : ExpectationsAbstract
 //    {
 //    }
 //}
